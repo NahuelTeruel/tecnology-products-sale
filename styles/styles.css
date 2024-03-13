@@ -1,0 +1,160 @@
+/* styles.css */
+/* Estilos generales */
+body {
+    font-family: 'Roboto Condensed', Arial, sans-serif; /* Cambio de la tipografía */
+    margin: 0;
+    padding: 0;
+    background-color: #b7c408;
+}
+
+header {
+    background: linear-gradient(to right, #f4a261, #e8b61f);
+    padding: 10px 0;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Posiciona el header en la parte superior */
+    width: 100%; /* Ancho completo del header */
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px; /* Aumento de la distancia entre categorías */
+    position: relative; /* Añadido para posición absoluta del submenú */
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc80; /* Cambio de color de resaltado */
+    border-radius: 20px;
+}
+
+/* Desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4a261; /* Cambiado a un color similar al del navbar */
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 8px 0; /* Espaciado interno */
+    margin-bottom: 60px;
+}
+
+.dropdown-content li {
+    display: flex;
+    padding: 8px 20px; /* Espaciado interno */
+    color: #fff; /* Color de texto */
+    justify-content: start;
+    border-radius: 5px; /* Redondeado en el borde superior */
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    /* Estilos para pantallas pequeñas */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+main {
+    margin-top: 24px;
+    padding: 20px; /* Agrega un poco de espacio alrededor del contenido principal */
+}
+
+.categoria {
+    margin-bottom: 40px; /* Aumenta la distancia entre las categorías */
+    text-align: center; /* Centra el texto del título */
+}
+
+h2 {
+    font-size: 28px;
+    color: #333; /* Color de texto para los títulos */
+    margin-bottom: 10px; /* Espaciado inferior para los títulos */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.producto {
+    background-color: #f9f9f9; /* Cambio del color de fondo para mayor contraste */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espaciado inferior para las imágenes */
+}
+
+.producto ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px; /* Espaciado inferior para la lista de características */
+}
+
+.producto ul li {
+    margin-bottom: 5px;
+}
+
+.producto p {
+    margin-top: 10px; /* Espaciado superior para el precio */
+    font-weight: bold;
+}
+
+.producto:hover {
+    background-color: #e0e0e0; /* Cambio de color de fondo en hover para hacerlo más notorio */
+    transform: translateY(-5px); /* Efecto de levantamiento */
+}
+
+.addToCartBtn {
+    background-color: #f4a261;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addToCartBtn:hover {
+    background-color: #f16626;
+}
